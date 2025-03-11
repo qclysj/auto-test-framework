@@ -11,9 +11,8 @@ class TestCase(unittest.TestCase):
         option.add_experimental_option("detach", True)
         driver = webdriver.Chrome(options=option)
         driver.get("https://www.jd.com")
-
+        time.sleep(5)
         driver.find_element(By.LINK_TEXT,'立即登录').click()
-        driver.implicitly_wait(3)
         driver.find_element(By.ID,'loginname').send_keys('1111111111')
         driver.find_element(By.NAME,'nloginpwd').send_keys('123456789')
         driver.find_element(By.ID,'loginsubmit').click()
