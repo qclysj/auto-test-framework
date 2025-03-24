@@ -21,8 +21,8 @@ class Login:
         driver=self.webdriver()
 
         driver.find_element(By.LINK_TEXT,"立即登录").click()
-        driver.find_element(By.ID,"loginname").send_keys('18292830257')
-        driver.find_element(By.ID,"nloginpwd").send_keys('pang20040207')
+        driver.find_element(By.ID,"loginname").send_keys('yourusername')
+        driver.find_element(By.ID,"nloginpwd").send_keys('yourpassword')
         driver.find_element(By.ID,"loginsubmit").click()
         ##!!!滑块验证码手动操作
         return driver
